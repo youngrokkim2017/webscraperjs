@@ -21,7 +21,7 @@ axios(url)
         const data = cheerio.load(html)
         const articles = []
 
-        data('.LandingRiver_promoItem__15bX_', html).each(() => {
+        data('.LandingRiver_promoItem__15bX_', html).each(function () {
             const title = data(this).text()
             // data(this).attr('href')
             const url = data(this).find('a').attr('href')
